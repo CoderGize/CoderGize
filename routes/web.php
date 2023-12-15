@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\CmsController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\SocialController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,7 +36,10 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::post('/update_user_confirm/{id}', [UserController::class, 'update_user_confirm']);
     Route::get('/delete_user/{id}', [UserController::class, 'delete_user']);
 
-    // {{ User }}
+      // {{ Social }}
+      Route::get('/show_social',[SocialController::class,'show_social']);
+      Route::post('/update_social_confirm/{id}',[SocialController::class,'update_social_confirm']);
+      Route::get('/update_social/{id}',[SocialController::class,'update_social']);
 
 
 
