@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1720" viewBox="0 0 1920 1720">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0c0e6c"/>
+      <stop offset="1" stop-color="#03021c"/>
+    </radialGradient>
+    <clipPath id="clip-About">
+      <rect width="1920" height="1720"/>
+    </clipPath>
+  </defs>
+  <g id="About" clip-path="url(#clip-About)">
+    <rect width="1920" height="1720" fill="#fff"/>
+    <rect id="Rectangle_102" data-name="Rectangle 102" width="1920" height="1719" transform="translate(0 1)" fill="#03021c"/>
+    <ellipse id="Ellipse_10" data-name="Ellipse 10" cx="425" cy="424" rx="425" ry="424" transform="translate(-120 404)" opacity="0.61" fill="url(#radial-gradient)"/>
+    <ellipse id="Ellipse_11" data-name="Ellipse 11" cx="601" cy="600" rx="601" ry="600" transform="translate(824 -12)" opacity="0.61" fill="url(#radial-gradient)"/>
+    <ellipse id="Ellipse_9" data-name="Ellipse 9" cx="425" cy="424" rx="425" ry="424" transform="translate(-155 -415)" opacity="0.61" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

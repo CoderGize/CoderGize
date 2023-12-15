@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\CmsController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +14,32 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::prefix('/admin')->middleware('auth')->group(function () {
+
+    Route::get('/', [CmsController::class, 'dash']);
+
+    // {{ User }}
+
+    Route::get('/show_user', [UserController::class, 'show_user']);
+    Route::get('/update_user/{id}', [UserController::class, 'update_user']);
+    Route::post('/update_user_confirm/{id}', [UserController::class, 'update_user_confirm']);
+    Route::get('/delete_user/{id}', [UserController::class, 'delete_user']);
+
+    // {{ User }}
+
+
+
+
+});
 
 Route::get('/', function () {
     return view('welcome');

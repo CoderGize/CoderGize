@@ -1,0 +1,502 @@
+@import url('https://fonts.cdnfonts.com/css/visby');
+
+*,
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Visby',
+    sans-serif;
+    color: white;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+}
+
+:root {
+    --primary-color: #04032b;
+    --active: #0A0EF3;
+    --light: rgb(248, 249, 250);
+    --global-gradient: linear-gradient(to right, var(--primary-color), var(--active));
+    --service-gradient: linear-gradient(90deg, rgba(21, 25, 129, 1) 0%, rgba(8, 9, 52, 1) 60%, rgba(3, 2, 28, 1) 110%);
+    --service-border: #11168D;
+    --bg: #03033D;
+}
+
+/* -------Loader------- */
+.loader {
+    width: 2rem;
+    height: 2rem;
+    clear: both;
+    margin: 1rem auto;
+    border-radius: 50%;
+    border-left: 0 #000 solid;
+    border-right: 0 #000 solid;
+    animation: spSphere 1s infinite linear;
+}
+
+@keyframes spSphere {
+    0% {
+        border-left: 0 #000 solid;
+        border-right: 0 #000 solid;
+    }
+
+    33% {
+        border-left: 2rem #000 solid;
+        border-right: 0 #000 solid;
+    }
+
+    34% {
+        border-left: 0 #000 solid;
+        border-right: 2rem #000 solid;
+    }
+
+    66% {
+        border-left: 0 #000 solid;
+        border-right: 0 #000 solid;
+    }
+}
+
+/* -------End Loader------- */
+
+
+/* -------Text------- */
+.h1-custom {
+    line-height: 0.9 !important;
+    font-weight: 800 !important;
+    font-size: 65px !important;
+}
+
+.p-custom {
+    font-size: 25px !important;
+    line-height: 1.5 !important;
+}
+
+.h2-custom {
+    font-size: 40px !important;
+    font-weight: 800 !important;
+}
+
+.p-custom-service {
+    font-size: 20px !important;
+}
+
+.p-custom-text {
+    font-size: 20px !important;
+}
+
+.card-right .card-text {
+    padding-top: 0px !important;
+}
+
+/* -------End Text------- */
+
+.navbar {
+    background-color: var(--primary-color);
+    height: 90px;
+    transition: height 0.3s ease-in-out;
+}
+
+.navbar.shrunk {
+    height: 75px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.active {
+    color: var(--active) !important;
+}
+
+.nav-link:hover {
+    color: var(--active) !important;
+}
+
+.navbg {
+    background-color: var(--bg) !important;
+}
+
+.nav-li {
+    font-size: 60px !important;
+    color: white;
+    line-height: 2.5 !important;
+    text-decoration: none !important;
+    margin-right: 20px !important;
+}
+
+.container .hero {
+    display: grid !important;
+    place-content: center !important;
+    height: 100vh !important;
+    position: absolute !important;
+}
+
+.char-text {
+    font-size: 4rem;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.char-text2 {
+    font-size: 2rem;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.char-text-about {
+    font-size: 120px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.char {
+    transform: translateY(115px);
+    transition: transform .5s;
+}
+
+#service {
+    margin-top: 150px !important;
+}
+
+.half-underline {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.half-underline:hover::before {
+    width: 100% !important;
+}
+
+.half-underline::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px !important;
+    height: 2px;
+    background-color: var(--active) !important;
+    transition: width .3s ease-in-out;
+}
+
+.service-text {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+#service-detail {
+    background-image: url(/images/servicedetail.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero {
+    background-image: url(/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    min-height: 100vh !important;
+    text-align: center !important;
+    display: flex !important;
+    position: relative !important;
+    z-index: 1 !important;
+    place-content: center !important;
+    place-items: center !important;
+    }
+
+#hero-about {
+    background-image: url(/images/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    }
+
+    #about {
+        background-image: url(/images/about.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        scale: 1.1 !important;
+    }
+
+    #service-bg {
+        background-image: url(/images/services.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    min-height: 100vh !important;
+}
+
+#contact-bg {
+    background-image: url(/images/services.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh !important;
+}
+
+#bg {
+    background-color: var(--bg);
+}
+
+#service-about {
+    background-image: url(/images/serviceabout.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-custom {
+    background-image: url('/images/homebg.svg');
+}
+
+.space {
+    line-height: 1.1 !important;
+}
+
+.hero-content {
+    margin-bottom: 50px !important;
+}
+
+.about-service-text {
+    padding: 150px !important;
+}
+
+.btn-custom {
+    --color: white;
+    font-family: inherit;
+    display: inline-block;
+    width: auto;
+    height: 2.6em;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 50px !important;
+    font-weight: 500;
+    color: var(--color);
+    background-color: transparent !important;
+    }
+
+    .btn-custom:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--color);
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    .btn-custom:hover {
+        color: var(--active);
+    }
+
+    .btn-custom:before {
+        top: 100%;
+        left: 100%;
+        transition: all .7s;
+    }
+
+    .btn-custom:hover:before {
+        top: -30px;
+        left: -30px;
+    }
+
+    .btn-custom:active:before {
+        background: var(--active);
+        transition: background 0s;
+}
+
+.card-left {
+    background: var(--service-gradient);
+    border: none !important;
+    }
+
+    .card-right {
+        border: 1px solid var(--service-border) !important;
+        background-color: transparent !important;
+}
+
+.card {
+    width: 100% !important;
+    height: 100% !important;
+    color: white !important;
+    border-radius: 50px !important;
+    }
+
+    .cardanime {
+        border: 0px solid transparent !important;
+        transition: border .1s ease-in-out;
+    }
+
+    .cardanime:hover {
+        border: 1px solid var(--active) !important;
+    }
+
+    .about-title {
+        font-size: 80px !important;
+        font-weight: 900 !important;
+        }
+
+        .about-text {
+            font-size: 20px !important;
+            font-weight: 300 !important;
+            line-height: 1.5 !important;
+        }
+
+        .about-service-sub {
+            font-size: 15px !important;
+            font-weight: 200 !important;
+        }
+
+        #service-about img {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: cover !important;
+}
+
+#footer {
+    background-color: var(--primary-color) !important;
+}
+
+footer li {
+    display: inline !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+}
+
+footer li a {
+    border-radius: 50% !important;
+    font-size: 20px !important;
+    }
+
+    .powered {
+        font-size: 15px !important;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .card-row {
+            position: absolute !important;
+        }
+
+        .card-left {
+            background: var(--service-gradient);
+            border: none !important;
+            z-index: 999 !important;
+        }
+
+        .card-right {
+            border: 1px solid var(--service-border) !important;
+            background-color: transparent !important;
+            z-index: 1 !important;
+    }
+
+    .card-right .card-text {
+        padding-top: 130px !important;
+    }
+
+    .h1-custom {
+        line-height: 130% !important;
+        font-weight: 500 !important;
+        font-size: 25px !important;
+    }
+
+    .p-custom {
+        font-size: 14px !important;
+        line-height: 2 !important;
+    }
+
+    .btn-custom {
+        border-radius: 20px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        font-weight: 300 !important;
+        height: auto !important;
+        font-size: 10px !important;
+    }
+
+    .h2-custom {
+        font-size: 22px !important;
+        font-weight: 800 !important;
+    }
+
+.p-custom-service {
+    font-size: 14px !important;
+}
+
+    .p-custom-text {
+        font-size: 16px !important;
+    }
+
+    .powered {
+        font-size: 12px !important;
+    }
+
+    .nav-li {
+        font-size: 45px !important;
+        color: white;
+        line-height: 2.5 !important;
+        text-decoration: none !important;
+        margin-right: 20px !important;
+        }
+
+        .char-text {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            font-weight: 900 !important;
+        }
+
+        .char-text2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            font-weight: 500 !important;
+        }
+
+        .char-text-about {
+            font-size: 50px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+    #hero-about {
+        background-image: url(/images/about.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 60vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-title {
+        font-size: 50px !important;
+        font-weight: 900 !important;
+    }
+
+        .about-text {
+            font-size: 15px !important;
+            font-weight: 300 !important;
+            line-height: 1.5 !important;
+        }
+
+        .about-service-text {
+            padding: 20px !important;
+        }
+}

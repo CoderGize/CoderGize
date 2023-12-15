@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1076" viewBox="0 0 1920 1076">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0c0e6c"/>
+      <stop offset="1" stop-color="#03021c"/>
+    </radialGradient>
+    <clipPath id="clip-Sevices_inside_pages_and_contact_">
+      <rect width="1920" height="1076"/>
+    </clipPath>
+  </defs>
+  <g id="Sevices_inside_pages_and_contact_" data-name="Sevices inside pages and contact " clip-path="url(#clip-Sevices_inside_pages_and_contact_)">
+    <rect width="1920" height="1076" fill="#fff"/>
+    <rect id="Rectangle_102" data-name="Rectangle 102" width="1920" height="1079" fill="#03021c"/>
+    <circle id="Ellipse_13" data-name="Ellipse 13" cx="520.5" cy="520.5" r="520.5" transform="translate(-196 -205)" opacity="0.61" fill="url(#radial-gradient)"/>
+    <circle id="Ellipse_14" data-name="Ellipse 14" cx="520.5" cy="520.5" r="520.5" transform="translate(1020 227)" opacity="0.61" fill="url(#radial-gradient)"/>
+  </g>
+</svg>
