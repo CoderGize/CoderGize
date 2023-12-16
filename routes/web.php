@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CmsController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\HeroController;
@@ -93,6 +94,12 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
      Route::post('/add_strategy', [StrategyController::class, 'add_strategy']);
      Route::post('/update_strategy/{id}', [StrategyController::class, 'update_strategy']);
      Route::get('/delete_strategy/{id}', [StrategyController::class, 'delete_strategy']);
+
+       //{{ Category }}
+       Route::get('/show_category', [CategoryController::class, 'show_category']);
+       Route::post('/add_category', [CategoryController::class, 'add_category']);
+       Route::post('/update_category/{id}', [CategoryController::class, 'update_category']);
+       Route::get('/delete_category/{id}', [CategoryController::class, 'delete_category']);
 
 
 
