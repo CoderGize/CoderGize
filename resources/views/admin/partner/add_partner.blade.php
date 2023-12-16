@@ -23,12 +23,12 @@
                         <input type="file" name="logo" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
                             Url
                         </label>
                         <input type="text" name="url" class="form-control" required>
-                    </div>
+                    </div> --}}
 
                 </div>
 

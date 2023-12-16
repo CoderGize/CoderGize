@@ -37,23 +37,23 @@
                                         <tr class="text-center">
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Title
+                                                Icon
                                             </th>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Subtitle
+                                                Title English
                                             </th>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                                Text
+                                                Titlr Arabic
                                             </th>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                                Detailed Text
+                                                Text English
                                             </th>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                                With Options
+                                                Text Arabic
                                             </th>
                                             <th class="text-secondary opacity-7"></th>
                                             <th class="text-secondary opacity-7"></th>
@@ -62,33 +62,31 @@
                                     <tbody>
                                         @forelse ($service as $data)
                                             <tr class="text-center">
+                                                <td class="bg-primary">
+                                                    <img src="/service/{{ $data->icon }}" async class="d-block m-auto"
+                                                        width="50px" alt="">
+                                                </td>
                                                 <td>
                                                     <p class="text-xs font-weight-bold mb-0">
-                                                        {!! $data->title !!}
+                                                        {!! $data->titleen !!}
                                                     </p>
                                                 </td>
                                                 <td>
                                                     <p class="text-xs font-weight-bold mb-0">
-                                                        {!! $data->subtitle !!}
+                                                        {!! $data->titlear !!}
                                                     </p>
                                                 </td>
                                                 <td>
                                                     <p class="text-xs font-weight-bold mb-0">
-                                                        {!! $data->text !!}
+                                                        {!! $data->texten !!}
                                                     </p>
                                                 </td>
                                                 <td>
                                                     <p class="text-xs font-weight-bold mb-0">
-                                                        {!! $data->detailtext !!}
+                                                        {!! $data->textar !!}
                                                     </p>
                                                 </td>
-                                                <td>
-                                                    @if ($data->have_option == 1)
-                                                        <i class="bi bi-check2 text-success fs-3"></i>
-                                                    @else
-                                                        <i class="bi bi-x-lg text-danger fs-3"></i>
-                                                    @endif
-                                                </td>
+
                                                 <td class="align-middle">
                                                     <a href="{{ url('admin/update_service', $data->id) }}"
                                                         class="text-primary font-weight-bold text-xs">

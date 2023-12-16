@@ -1,51 +1,61 @@
-<button type="button" class="btn btn-dark mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $data->id }}">
-    <i class="me-2 fs-6 bi bi-plus-lg"></i>
-    Update Partner
-</button>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="modal fade" id="exampleModal{{ $data->id }}" tabindex="-1"
-    aria-labelledby="exampleModal{{ $data->id }}Label{{ $data->id }}" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModal{{ $data->id }}Label{{ $data->id }}">
-                    Partner
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<head>
+    @include('admin.css')
+</head>
+
+<body class="g-sidenav-show   bg-gray-100">
+
+    @include('admin.sidebar')
+    <main class="main-content position-relative border-radius-lg ">
+        <!-- Navbar -->
+        @include('admin.navbar')
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+
+                        <div class="card-header pb-0 ">
+                            <a href="{{ url('/admin/show_service') }}" class="btn btn-dark">
+                                <i class="bi bi-arrow-left"></i>
+                                back
+                            </a>
+                            <h6>Edit </h6>
+                        </div>
+
+                        <div class="card-body px-auto pt-0 pb-2">
+                            <form action="{{ url('/admin/update_partner_confirm', $partner->id) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="mt-4 row">
+                                    <div class="col-12 col-sm-12">
+                                        <div class="mb-3">
+                                            {{-- <label for="exampleInputPassword1" class="form-label">Logo</label> --}}
+                                            <img src="/partner/{{ $partner->logo }}" class="d-block m-auto" width="300px" alt="">
+                                            <div class="col-12 col-sm-6 mx-auto">
+                                                <div class="mt-4">
+                                                    <input name="logo" class="form-control" id="" type="file" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn mt-3 btn-dark ">Submit</button>
+                                </div>
+                             </form>
+                    </div>
+                </div>
             </div>
-            <form action="{{ url('/admin/update_partner/' . $data->id) }}" method="POST" enctype="multipart/form-data">
-                @csrf
-
-                <div class="modal-body">
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">
-                            Logo
-                        </label>
-                        <img src="/partner/{{ $data->logo }}" async class="d-block m-auto" width="50px"
-                            alt="">
-                        <input type="file" class="form-control" value="{{ $data->logo }}" name="logo" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">
-                            Url
-                        </label>
-                        <input type="text" class="form-control" value="{{ $data->url }}"
-                            id="exampleFormControlInput1" name="url">
-                    </div>
-
-                </div>
-
-                <div class="modal-footer">
-
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-dark">Add
-                        <i class="bi bi-plus-lg"></i>
-                    </button>
-
-                </div>
-            </form>
+            @include('admin.footer')
         </div>
-    </div>
-</div>
+    </main>
+
+    @include('admin.script')
+
+</body>
+
+</html>

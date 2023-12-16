@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\CmsController;
+use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SocialController;
 
@@ -36,12 +38,24 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::post('/update_user_confirm/{id}', [UserController::class, 'update_user_confirm']);
     Route::get('/delete_user/{id}', [UserController::class, 'delete_user']);
 
-      // {{ Social }}
-      Route::get('/show_social',[SocialController::class,'show_social']);
-      Route::post('/update_social_confirm/{id}',[SocialController::class,'update_social_confirm']);
-      Route::get('/update_social/{id}',[SocialController::class,'update_social']);
+    // {{ Social }}
+    Route::get('/show_social',[SocialController::class,'show_social']);
+    Route::post('/update_social_confirm/{id}',[SocialController::class,'update_social_confirm']);
+    Route::get('/update_social/{id}',[SocialController::class,'update_social']);
 
+    //{{ Partners }}
+    Route::get('/show_partner', [PartnerController::class, 'show_partner']);
+    Route::post('/add_partner', [PartnerController::class, 'add_partner']);
+    Route::get('/update_partner/{id}', [PartnerController::class, 'update_partner']);
+    Route::post('/update_partner_confirm/{id}', [PartnerController::class, 'update_partner_confirm']);
+    Route::get('/delete_partner/{id}', [PartnerController::class, 'delete_partner']);
 
+    //{{ Service }}
+    Route::get('/show_service', [ServiceController::class, 'show_service']);
+    Route::post('/add_service', [ServiceController::class, 'add_service']);
+    Route::get('/update_service/{id}', [ServiceController::class, 'update_service']);
+    Route::post('/update_service_confirm/{id}', [ServiceController::class, 'update_service_confirm']);
+    Route::get('/delete_service/{id}', [ServiceController::class, 'delete_service']);
 
 
 });

@@ -18,43 +18,50 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title
+                            Title English
                         </label>
-                        <input type="text" name="title" class="form-control" id="exampleFormControlInput1"
-                            name="title" placeholder="title..." required>
+                        <input type="text" name="titleen" class="form-control" id="exampleFormControlInput1"
+                            name="titleen" placeholder="title..." required>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Subtitle
+                            Title Arabic
                         </label>
-                        <textarea name="subtitle" class="form-control" id="" cols="30" rows="10" required>
+                        <input name="titlear" class="form-control" id="" cols="30" rows="10" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            Text English
+                        </label>
+                        <textarea name="texten" class="form-control" id="" cols="30" rows="10" required>
                         </textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text
+                            Text Arabic
                         </label>
-                        <textarea name="text" class="form-control" id="" cols="30" rows="10" required>
+                        <textarea name="textar" class="form-control" id="" cols="30" rows="10" required>
                         </textarea>
                     </div>
+
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Detailed Text
+                            Icon
                         </label>
-                        <textarea name="detailtext" class="form-control" id="" cols="30" rows="10" required>
-                        </textarea>
+                        <input type="file" name="icon" class="form-control" id="" cols="30" rows="10" required />
                     </div>
 
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="">Service Option Status</label>
                         <select class="form-select" name="have_option">
                             <option value="0">No Options</option>
                             <option value="1">With Options</option>
                         </select>
-                    </div>
+                    </div> --}}
 
                 </div>
 

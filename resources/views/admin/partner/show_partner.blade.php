@@ -39,10 +39,10 @@
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                 Logo
                                             </th>
-                                            <th
+                                            {{-- <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                 Url
-                                            </th>
+                                            </th> --}}
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                                 Created At
@@ -58,7 +58,7 @@
                                                     <img src="/partner/{{ $data->logo }}" async class="d-block m-auto"
                                                         width="50px" alt="">
                                                 </td>
-                                                <td>
+                                                {{-- <td>
                                                     @if ($data->url != null)
                                                         <a href="{{ $data->url }}"
                                                             class="text-decoration-none text-primary">
@@ -68,7 +68,7 @@
                                                     @else
                                                         <i class="bi bi-x-lg text-danger fs-3"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td>
                                                     <p class="text-xs font-weight-bold mb-0">
                                                         {{ $data->created_at }}

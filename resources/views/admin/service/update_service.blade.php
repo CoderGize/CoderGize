@@ -23,73 +23,59 @@
                                 <i class="bi bi-arrow-left"></i>
                                 back
                             </a>
-                            <h6>Edit {{ $service->title }}</h6>
+                            {{-- <h6>Edit {{ $service->titleen }}</h6> --}}
                         </div>
 
                         <div class="card-body px-auto pt-0 pb-2">
-                            <form action="{{ url('/admin/update_service_confirm', $service->id) }}" method="POST"
-                                enctype="multipart/form-data">
+                            <form action="{{ url('/admin/update_service_confirm', $service->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mt-4 row">
                                     <div class="col-12 col-sm-6">
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Title</label>
-                                            <input type="text" name="title" value="{{ $service->title }}"
-                                                class="form-control" required>
+                                            <label for="exampleInputPassword1" class="form-label">Title English</label>
+                                            <input type="text" name="titleen" value="{{ $service->titleen }}" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Subtitle</label>
-                                            <textarea name="subtitle" class="form-control" id="" cols="30" rows="2" required>{{ $service->subtitle }}</textarea>
+                                            <label for="exampleInputEmail1" class="form-label">Title Arabic</label>
+                                            <input name="titlear" class="form-control" id="" cols="30" rows="2" required value="{{ $service->titlear }}" />
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Text</label>
-                                            <textarea name="text" class="form-control" id="" cols="30" rows="2" required>{{ $service->text }}</textarea>
+                                            <label for="exampleInputEmail1" class="form-label">Text English</label>
+                                            <textarea name="texten" class="form-control" id="" cols="30" rows="2" required>{{ $service->texten }}</textarea>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Detailed Text</label>
-                                            <textarea name="detailtext" class="form-control" id="" cols="30" rows="2">{{ $service->detailtext }}</textarea>
+                                            <label for="exampleInputEmail1" class="form-label">Text Arabic</label>
+                                            <textarea name="textar" class="form-control" id="" cols="30" rows="2">{{ $service->textar }}</textarea>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6">
+                                    <div class="col-12">
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Service Option
-                                                Status</label>
-                                            <select class="form-select" name="have_option">
-                                                <option value="0"
-                                                    {{ $service->have_option == '0' ? 'selected' : '' }}>
-                                                    No Options
-                                                </option>
-                                                <option value="1"
-                                                    {{ $service->have_option == '1' ? 'selected' : '' }}>
-                                                    With Options
-                                                </option>
-                                            </select>
+                                            <label for="exampleInputPassword1" class="form-label">Current Image</label>
+                                            <img src="/service/{{$service->icon}}" class="d-block m-auto" width="200px" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6">
+                                    <div class="col-12">
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Option Title</label>
-                                            <input type="text" name="title_option"
-                                                value="{{ $service->title_option }}" class="form-control"
-                                                {{ $service->have_option == 0 ? 'disabled' : '' }} >
+                                            <label for="exampleInputPassword1" class="form-label">New Image</label>
+                                            <input name="icon" class="form-control" id="" type="file" accept="image/*">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn mt-3 btn-dark ">Submit</button>
+                                    <button type="submit" class="btn mt-3 btn-dark">Submit</button>
                                 </div>
                             </form>
 
-                            @if ($service->have_option == 1)
+                            {{-- @if ($service->have_option == 1)
                                 @include('admin.service.show_service_option')
-                            @endif
+                            @endif --}}
                         </div>
 
                     </div>
