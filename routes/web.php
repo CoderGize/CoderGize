@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\ProcessControler;
-use App\Http\Controllers\ServiceSliderController;
+use App\Http\Controllers\Admin\ServiceSliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -69,6 +69,9 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
 
     //{{ Service Slider}}
     Route::get('/show_service_slider',[ServiceSliderController::class,'show_service_slider']);
+    Route::post('/add_service_slider',[ServiceSliderController::class,'add_service_slider']);
+    Route::post('/update_service_slider/{id}',[ServiceSliderController::class,'update_service_slider']);
+    Route::get('/delete_service_slider/{id}',[ServiceSliderController::class,'delete_service_slider']);
 
 
 

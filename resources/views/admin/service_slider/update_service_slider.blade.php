@@ -15,7 +15,7 @@
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ url('/admin/update_hero/' . $data->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin/update_service_slider/' . $data->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="modal-body">
@@ -34,29 +34,27 @@
                         <input type="text" name="titlear" class="form-control" required value="{{ $data->titlear }}">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">
-                            Service English
-                        </label>
-                        <input type="text" name="serviceen" class="form-control" required value="{{ $data->serviceen }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">
-                            Service Arabic
-                        </label>
-                        <input type="text" name="servicear" class="form-control" required value="{{ $data->servicear }}">
-                    </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
                             Image
                         </label>
                     <div>
-                        <img src="/hero/{{ $data->img }}" width="100px" />
+                        <img src="/service_slider/{{ $data->img }}" width="100px" />
                     </div>
 
                         <input type="file" name="img" class="form-control mt-3"  required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            Icon
+                        </label>
+                    <div>
+                        <img src="/service_slider/{{ $data->icon }}" width="100px" />
+                    </div>
+
+                        <input type="file" name="icon" class="form-control mt-3"  required>
                     </div>
 
 
