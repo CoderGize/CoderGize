@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CmsController;
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -67,12 +68,16 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
      Route::post('/update_process/{id}', [ProcessControler::class, 'update_process']);
      Route::get('/delete_process/{id}', [ProcessControler::class, 'delete_process']);
 
-    //{{ Service Slider}}
+    //{{ Service Slider }}
     Route::get('/show_service_slider',[ServiceSliderController::class,'show_service_slider']);
     Route::post('/add_service_slider',[ServiceSliderController::class,'add_service_slider']);
     Route::post('/update_service_slider/{id}',[ServiceSliderController::class,'update_service_slider']);
     Route::get('/delete_service_slider/{id}',[ServiceSliderController::class,'delete_service_slider']);
 
+    //{{ Customer }}
+     Route::get('/show_customer', [CustomerController::class, 'show_customer']);
+     Route::post('/add_customer', [CustomerController::class, 'add_customer']);
+     Route::get('/delete_customer/{id}', [CustomerController::class, 'delete_customer']);
 
 
 

@@ -46,40 +46,7 @@ class PartnerController extends Controller
         return redirect()->back()->with('message', 'Partner Added');
     }
 
-    public function update_partner($id){
 
-        $partner = Partner::find($id);
-
-        return view('admin.partner.update_partner', compact('partner'));
-
-    }
-
-    public function update_partner_confirm(Request $request, $id)
-    {
-        $partner = Partner::find($id);
-
-        $logo = $request->logo;
-
-
-
-        if ($logo)
-        {
-            $logoname = Str::random(20) . '.' . $logo->getClientOriginalExtension();
-
-            // Save the original image
-            $request->logo->move('partner', $logoname);
-
-            // Change the image quality using Intervention Image
-            $logo = Image::make(public_path('partner/' . $logoname));
-            $logo->encode($logo->extension, 10)->save(public_path('partner/' . $logoname)); // Adjust quality as needed
-
-            $partner->logo = $logoname;
-        }
-
-        $partner->save();
-
-        return redirect('/admin/show_partner')->with('message', 'Partner Updated');
-    }
 
     public function delete_partner($id)
     {
