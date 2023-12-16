@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CmsController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\PopController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SocialController;
@@ -78,6 +79,15 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
      Route::get('/show_customer', [CustomerController::class, 'show_customer']);
      Route::post('/add_customer', [CustomerController::class, 'add_customer']);
      Route::get('/delete_customer/{id}', [CustomerController::class, 'delete_customer']);
+
+
+     //{{ Pop }}
+     Route::get('/show_pop', [PopController::class, 'show_pop']);
+     Route::post('/add_pop', [PopController::class, 'add_pop']);
+     Route::post('/update_pop/{id}', [PopController::class, 'update_pop']);
+     Route::get('/delete_pop/{id}', [PopController::class, 'delete_pop']);
+
+    
 
 
 
