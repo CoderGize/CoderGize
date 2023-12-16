@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\ProcessControler;
 use App\Http\Controllers\Admin\ServiceSliderController;
+use App\Http\Controllers\Admin\StrategyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -87,7 +88,13 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
      Route::post('/update_pop/{id}', [PopController::class, 'update_pop']);
      Route::get('/delete_pop/{id}', [PopController::class, 'delete_pop']);
 
-    
+     //{{ Strategy }}
+     Route::get('/show_strategy', [StrategyController::class, 'show_strategy']);
+     Route::post('/add_strategy', [StrategyController::class, 'add_strategy']);
+     Route::post('/update_strategy/{id}', [StrategyController::class, 'update_strategy']);
+     Route::get('/delete_strategy/{id}', [StrategyController::class, 'delete_strategy']);
+
+
 
 
 

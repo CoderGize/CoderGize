@@ -58,13 +58,13 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link rounded-3 {{ 'admin/show_about' == request()->path() ? 'main-color' : '' }}"
-                    href="{{ url('/admin/show_about') }}">
+                <a class="nav-link rounded-3 {{ 'admin/show_strategy' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_strategy') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="bi bi-info-circle text-primary text-sm opacity-10"></i>
                     </div>
-                    <span class="nav-link-text ms-1">About</span>
+                    <span class="nav-link-text ms-1">Strategy</span>
                 </a>
             </li>
 
@@ -92,16 +92,7 @@
                 </a>
             </li>
 
-            {{-- <li class="nav-item">
-                <a class="nav-link rounded-3 {{ 'admin/show_landing' == request()->path() ? 'main-color' : '' }}"
-                    href="{{ url('/admin/show_landing') }}">
-                    <div
-                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="bi bi-collection text-danger text-sm opacity-10"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Landing Page</span>
-                </a>
-            </li> --}}
+
 
             <li class="nav-item">
                 <a class="nav-link rounded-3 {{ 'admin/show_partner' == request()->path() ? 'main-color' : '' }}"
