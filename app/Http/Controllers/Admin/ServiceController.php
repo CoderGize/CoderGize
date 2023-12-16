@@ -26,17 +26,19 @@ class ServiceController extends Controller
 
         if($icon)
         {
-            $logoname = Str::random(20) . '.' . $icon->getClientOriginalExtension();
+            $iconname = Str::random(20) . '.' . $icon->getClientOriginalExtension();
 
             //Save the original image
-            $request->icon->move('service', $logoname);
+            $request->icon->move('service', $iconname);
 
             //change the image quality using Intervention Image
-            $img2 = Image::make(public_path('service/' . $logoname));
-            $img2->save(public_path('service/' . $logoname));
+            $icon = Image::make(public_path('service/' . $iconname));
 
-            $service->icon = $logoname;
+            $icon->encode($icon->extension, 10)->save(public_path('service/' . $iconname));
+
+            $service->icon = $iconname;
         }
+
 
 
         $service->titleen = $request->titleen;

@@ -88,11 +88,7 @@
                                                 </td>
 
                                                 <td class="align-middle">
-                                                    <a href="{{ url('admin/update_service', $data->id) }}"
-                                                        class="text-primary font-weight-bold text-xs">
-                                                        Edit
-                                                        <i class="bi bi-pencil"></i>
-                                                    </a>
+                                                @include('admin.service.update_service')
                                                 </td>
                                                 <td class="align-middle">
                                                     <a href="{{ url('admin/delete_service', $data->id) }}"

@@ -1,4 +1,5 @@
 <a type="button"   class="text-primary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $data->id }}">
+
     Edit
     <i class="bi bi-pencil"></i>
 
@@ -10,11 +11,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModal{{ $data->id }}Label{{ $data->id }}">
-                    Service
+                    Partner
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ url('/admin/update_service/' . $data->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin/update_hero/' . $data->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="modal-body">
@@ -35,23 +36,24 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text English
+                            Service English
                         </label>
-                        <textarea type="text" name="texten" class="form-control" cols="30" rows="20" required >{{ $data->texten }}</textarea>
+                        <input type="text" name="serviceen" class="form-control" required value="{{ $data->serviceen }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text Arabic
+                            Service Arabic
                         </label>
-                        <textarea type="text" name="textar" class="form-control" cols="30" rows="20" required >{{ $data->textar }}</textarea>
+                        <input type="text" name="servicear" class="form-control" required value="{{ $data->servicear }}">
                     </div>
+
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Icon
+                            Image
                         </label>
                     <div>
-                        <img src="/service/{{ $data->icon }}" width="100px" />
+                        <img src="/hero/{{ $data->img }}" width="100px" />
                     </div>
 
                         <input type="file" name="img" class="form-control mt-3"  required>

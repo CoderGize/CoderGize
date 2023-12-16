@@ -34,8 +34,9 @@ class PartnerController extends Controller
             $request->logo->move('partner', $logoname);
 
             //change the image quality using Intervention Image
-            $img2 = Image::make(public_path('partner/' . $logoname));
-            $img2->save(public_path('partner/' . $logoname));
+            $logo = Image::make(public_path('partner/' . $logoname));
+
+            $logo->encode($logo->extension, 10)->save(public_path('partner/' . $logoname));
 
             $partner->logo = $logoname;
         }

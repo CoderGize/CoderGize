@@ -36,13 +36,24 @@
 
 
             <li class="nav-item">
-                <a class="nav-link rounded-3 {{ 'admin/show_landing' == request()->path() ? 'main-color' : '' }}"
-                    href="{{ url('/admin/show_landing') }}">
+                <a class="nav-link rounded-3 {{ 'admin/show_hero' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_hero') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="bi bi-house-door-fill text-primary text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Home Page</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link rounded-3 {{ 'admin/show_process' == request()->path() ? 'main-color' : '' }}"
+                    href="{{ url('/admin/show_process') }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-house-door-fill text-primary text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Process</span>
                 </a>
             </li>
 
