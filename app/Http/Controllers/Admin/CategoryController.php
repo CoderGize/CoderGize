@@ -29,20 +29,7 @@ class CategoryController extends Controller
 
     }
 
-    public function update_category(Request $request,$id){
 
-        $category = Category::find($id);
-
-        $category->titleen = $request->titleen;
-        $category->titlear = $request->titlear;
-
-
-        $category->save();
-
-        return redirect()->back()->with('message','Category Updated');
-
-
-    }
 
     public function delete_Category($id){
 

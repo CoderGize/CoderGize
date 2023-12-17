@@ -11,28 +11,44 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModal{{ $data->id }}Label{{ $data->id }}">
-                    Category
+                    Info
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ url('/admin/update_category/' . $data->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin/update_info/' . $data->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="modal-body">
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title English
+                            Text English
                         </label>
-                        <input type="text" name="titleen" class="form-control" required value="{{ $data->titleen }}">
+                        <textarea type="text" name="texten" class="form-control" cols="30" rows="20" required>{{ $data->texten }}</textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
                             Title Arabic
                         </label>
-                        <input type="text" name="titlear" class="form-control" required value="{{ $data->titlear }}">
+                        <textarea type="text" name="textar" class="form-control" cols="30" rows="20" required>{{ $data->textar }}</textarea>
                     </div>
+
+
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            Image
+                        </label>
+                    <div>
+                        <img src="/info/{{ $data->img }}" width="100px" />
+                    </div>
+
+                        <input type="file" name="img" class="form-control mt-3"  required>
+                    </div>
+
+
+
 
 
 

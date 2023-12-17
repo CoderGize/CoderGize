@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CmsController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\InfoController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PopController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -95,12 +96,17 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
      Route::post('/update_strategy/{id}', [StrategyController::class, 'update_strategy']);
      Route::get('/delete_strategy/{id}', [StrategyController::class, 'delete_strategy']);
 
-       //{{ Category }}
-       Route::get('/show_category', [CategoryController::class, 'show_category']);
-       Route::post('/add_category', [CategoryController::class, 'add_category']);
-       Route::post('/update_category/{id}', [CategoryController::class, 'update_category']);
-       Route::get('/delete_category/{id}', [CategoryController::class, 'delete_category']);
+    //{{ Category }}
+    Route::get('/show_category', [CategoryController::class, 'show_category']);
+    Route::post('/add_category', [CategoryController::class, 'add_category']);
+    Route::get('/delete_category/{id}', [CategoryController::class, 'delete_category']);
 
+
+     //{{ Info }}
+     Route::get('/show_info',[InfoController::class,'show_info']);
+     Route::post('/add_info',[InfoController::class,'add_info']);
+     Route::post('update_info/{id}',[InfoController::class,'update_info']);
+     Route::get('/delete_info/{id}', [InfoController::class, 'delete_info']);
 
 
 
