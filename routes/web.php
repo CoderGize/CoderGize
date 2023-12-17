@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\ProcessControler;
 use App\Http\Controllers\Admin\ServiceSliderController;
 use App\Http\Controllers\Admin\StrategyController;
+use App\Http\Controllers\Admin\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -117,7 +118,11 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
       Route::post('update_description_confirm/{id}',[DescriptionController::class,'update_description_confirm']);
       Route::get('/delete_description/{id}', [DescriptionController::class, 'delete_description']);
 
-
+     //{{ Testimonial }}
+     Route::get('/show_testimonial',[TestimonialController::class,'show_testimonial']);
+     Route::post('/add_testimonial',[TestimonialController::class,'add_testimonial']);
+     Route::post('update_testimonial/{id}',[TestimonialController::class,'update_testimonial']);
+     Route::get('/delete_testimonial/{id}', [TestimonialController::class, 'delete_testimonial']);
 
 
 });
