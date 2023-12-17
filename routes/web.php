@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CmsController;
 use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\DescriptionController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\InfoController;
 use App\Http\Controllers\Admin\PartnerController;
@@ -107,6 +108,14 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
      Route::post('/add_info',[InfoController::class,'add_info']);
      Route::post('update_info/{id}',[InfoController::class,'update_info']);
      Route::get('/delete_info/{id}', [InfoController::class, 'delete_info']);
+
+
+      //{{ Info }}
+      Route::get('/show_description',[DescriptionController::class,'show_description']);
+      Route::post('/add_description',[DescriptionController::class,'add_description']);
+      Route::get('update_description/{id}',[DescriptionController::class,'update_description']);
+      Route::post('update_description_confirm/{id}',[DescriptionController::class,'update_description_confirm']);
+      Route::get('/delete_description/{id}', [DescriptionController::class, 'delete_description']);
 
 
 
