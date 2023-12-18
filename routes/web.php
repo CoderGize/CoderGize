@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\ProcessControler;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\ServicePageController;
 use App\Http\Controllers\Admin\ServiceSliderController;
 use App\Http\Controllers\Admin\StrategyController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -132,6 +133,13 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::get('update_project/{id}',[ProjectController::class,'update_project']);
     Route::post('update_project_confirm/{id}',[ProjectController::class,'update_project_confirm']);
     Route::get('/delete_project/{id}', [ProjectController::class, 'delete_project']);
+
+    //{{ Service Page }}
+    Route::get('/show_service_page',[ServicePageController::class,'show_service_page']);
+    Route::post('/update_service_page/{id}',[ServicePageController::class,'update_service_page']);
+
+
+
 
 
 
