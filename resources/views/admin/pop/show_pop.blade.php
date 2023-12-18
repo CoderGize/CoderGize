@@ -41,11 +41,14 @@
                                             </th>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Title English
+                                                <img src="/images/en.png" width="15px" alt="">
+                                                Title
                                             </th>
                                             <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Title Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Title
                                         </th>
 
                                             <th class="text-secondary opacity-7"></th>
@@ -55,12 +58,11 @@
                                     <tbody>
                                         @forelse ($pop as $data)
                                             <tr class="text-center">
-                                                <td>
-                                                    <p class="text-xs font-weight-bold mb-0">
-                                                        {{ $data->color }}
+                                                <td style="text-align: center; vertical-align: middle;">
+                                                    <p class="text-xs font-weight-bold mb-0" style="display: inline-block;">
+                                                        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{$data->color}}" disabled>
                                                     </p>
                                                 </td>
-
 
                                                 <td>
                                                     <p class="text-xs font-weight-bold mb-0">

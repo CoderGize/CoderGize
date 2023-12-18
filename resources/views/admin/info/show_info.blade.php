@@ -41,11 +41,15 @@
                                             </th>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Text English
+                                                <img src="/images/en.png" width="15px" alt="">
+
+                                                Text
                                             </th>
                                             <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Text Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Text
                                         </th>
 
                                             <th class="text-secondary opacity-7"></th>

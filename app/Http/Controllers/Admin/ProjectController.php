@@ -76,7 +76,10 @@ class ProjectController extends Controller
 
         $project = project::find($id);
 
-        return view('admin.project.update_project',compact('project'));
+        $category = category::all();
+
+
+        return view('admin.project.update_project',compact('project','category'));
 
     }
 
@@ -85,41 +88,51 @@ class ProjectController extends Controller
         $project = project::find($id);
 
 
-        $project->category_nameen = $request->category_nameen;
-        $project->category_namear = $request->category_namear;
-        $project->color = $request->color;
-        $project->nameen = $request->nameen;
-        $project->namear = $request->img;
-        $project->texten = $request->texten;
-        $project->textar = $request->textar;
-        $project->dateen = $request->dateen;
-        $project->datear = $request->datear;
-        $project->clienten = $request->clienten;
-        $project->clientar = $request->clientar;
+        $project->category_id = $request->category_id;
 
-        $img = $request->img;
-
-
-        if($img)
+        if ($request->category_id == -1)
         {
-            $imgname = Str::random(20) . '.' . $img->getClientOriginalExtension();
+            return redirect()->back()->with('error', 'You have to pick a category');
+        }
+        else
+        {
+            $category = category::where('id', '=', $request->category_id)->first();
 
-            //Save the original image
-            $request->img->move('project', $imgname);
+            $project->category_nameen = $category->titleen;
+            $project->category_namear = $category->titlear;
 
-            //change the image quality using Intervention Image
-            $img = Image::make(public_path('project/' . $imgname));
+            $project->color = $request->color;
+            $project->nameen = $request->nameen;
+            $project->namear = $request->namear;
+            $project->texten = $request->texten;
+            $project->textar = $request->textar;
+            $project->dateen = $request->dateen;
+            $project->datear = $request->datear;
+            $project->clienten = $request->clienten;
+            $project->clientar = $request->clientar;
 
-            $img->encode($img->extension, 10)->save(public_path('project/' . $imgname));
+            $img = $request->img;
 
-            $project->img = $imgname;
+            if($img)
+            {
+                $imgname = Str::random(20) . '.' . $img->getClientOriginalExtension();
+
+                //Save the original image
+                $request->img->move('project', $imgname);
+
+                //change the image quality using Intervention Image
+                $img = Image::make(public_path('project/' . $imgname));
+
+                $img->encode($img->extension, 10)->save(public_path('project/' . $imgname));
+
+                $project->img = $imgname;
+            }
+
+            $project->save();
+
+            return redirect('/admin/show_project')->with('message','Project Updated');
         }
 
-
-
-        $project->save();
-
-        return redirect('/admin/show_project')->with('message', 'Project Updated');
 
 
     }

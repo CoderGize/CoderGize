@@ -18,7 +18,9 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titleen" class="form-control" id="exampleFormControlInput1"
                             name="titleen" placeholder="title..." required>
@@ -26,24 +28,30 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input name="titlear" class="form-control" id="" cols="30" rows="10" required />
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Text
                         </label>
-                        <textarea name="texten" class="form-control" id="" cols="30" rows="10" required>
+                        <textarea name="texten" class="form-control" id="" cols="30" rows="3" required>
                         </textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Text
                         </label>
-                        <textarea name="textar" class="form-control" id="" cols="30" rows="10" required>
+                        <textarea name="textar" class="form-control" id="" cols="30" rows="3" required>
                         </textarea>
                     </div>
 
@@ -52,7 +60,7 @@
                         <label for="exampleFormControlInput1" class="form-label">
                             Icon
                         </label>
-                        <input type="file" name="icon" class="form-control" id="" cols="30" rows="10" required />
+                        <input type="file" name="icon" class="form-control" id="" required />
                     </div>
 
                     {{-- <div class="mb-3">

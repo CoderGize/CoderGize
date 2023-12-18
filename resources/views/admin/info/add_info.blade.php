@@ -18,16 +18,19 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text English
+                            <img src="/images/en.png" width="15px" alt="">
+                            Text
                         </label>
-                        <textarea type="text" name="texten" class="form-control" cols="30" rows="20" required></textarea>
+                        <textarea type="text" name="texten" class="form-control" cols="30" rows="3" required></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Text
                         </label>
-                        <textarea type="text" name="textar" class="form-control" cols="30" rows="20" required></textarea>
+                        <textarea type="text" name="textar" class="form-control" cols="30" rows="3" required></textarea>
                     </div>
 
 

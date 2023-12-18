@@ -34,19 +34,23 @@
                         <label for="exampleFormControlInput1" class="form-label">
                             Color
                         </label>
-                        <input type="color" name="color" class="form-control" required>
+                        <input type="color" name="color" class="form-control form-control-color" id="exampleColorInput" >
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Name English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Name
                         </label>
                         <input type="text" name="nameen" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Name Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Name
                         </label>
                         <input type="text" name="namear" class="form-control" required>
                     </div>
@@ -54,42 +58,54 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Text
                         </label>
-                        <textarea type="text" name="texten" class="form-control" cols="30" rows="20" required></textarea>
+                        <textarea type="text" name="texten" class="form-control" cols="30" rows="3" required></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Text Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Text
                         </label>
-                        <textarea type="text" name="textar" class="form-control" cols="30" rows="20" required></textarea>
+                        <textarea type="text" name="textar" class="form-control" cols="30" rows="3" required></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Date English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Date
                         </label>
                         <input type="date" name="dateen" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Date Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Date
                         </label>
                         <input type="date" name="datear" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Client English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Client
                         </label>
                         <input type="text" name="clienten" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Client Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Client
                         </label>
                         <input type="text" name="clientar" class="form-control" required>
                     </div>

@@ -32,35 +32,35 @@
                                 @csrf
 
                                 <div class="row text-center m-3">
-                                    <div class="col-4">
-                                        <label for="">
-                                            Category Name English
+
+                                    <div class="col-6">
+                                        <label for="exampleFormControlInput1" class="form-label">
+                                            Category
                                         </label>
-                                        <input type="text" name="category_nameen" class="form-control"
-                                            value="{{ $project->category_nameen }}">
-                                    </div>
-                                    <div class="col-4">
-                                        <label for="">
-                                            Category Name Arabic
-                                        </label>
-                                        <input type="text" name="category_namear" class="form-control"
-                                            value="{{ $project->category_namear }}">
+                                        <select class="form-select" name="category_id" aria-label="Pick a category">
+                                            <option value="-1" selected>Pick a category</option>
+                                            @foreach ($category as $category)
+                                            <option value="{{ $category->id }}">{{ $category->titleen }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
 
-
-
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <label for="">
-                                            Date English
+                                            <img src="/images/en.png" width="15px" alt="">
+
+                                            Date
                                         </label>
                                         <input type="date" name="dateen" class="form-control"
                                             value="{{ $project->dateen }}" >
                                     </div>
 
 
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <label for="">
-                                            Date Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Date
                                         </label>
                                         <input type="date" name="datear" class="form-control"
                                             value="{{ $project->datear }}" >
@@ -69,34 +69,46 @@
 
 
 
+
+
+
+
                                 <div class="row text-center m-3">
-                                    <div class="col-4">
+                                    <div class="col-3">
                                         <label for="">
-                                            Name English
+                                            <img src="/images/en.png" width="15px" alt="">
+
+                                            Name
                                         </label>
                                         <input type="text" name="nameen" class="form-control" value="{{ $project->nameen }}" required>
 
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-3">
                                         <label for="">
-                                            Name Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Name
                                         </label>
                                         <input type="text" name="namear" class="form-control" value="{{ $project->namear }}" required>
 
                                     </div>
 
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <label for="">
-                                            Client English
+                                            <img src="/images/en.png" width="15px" alt="">
+
+                                            Client
                                         </label>
                                         <input type="text" name="clienten" class="form-control"
                                         value="{{ $project->clienten }}" >
 
                                     </div>
 
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <label for="">
-                                            Client Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Client
                                         </label>
                                         <input type="text" name="clientar" class="form-control"
                                         value="{{ $project->clientar }}" >
@@ -107,29 +119,33 @@
 
 
 
-                                <div class="row text-center m-3">
+                                <div class="row text-center my-3">
                                     <div class="col-4">
                                         <label for="">
-                                            Text English
+                                            <img src="/images/en.png" width="15px" alt="">
+
+                                            Text
                                         </label>
                                         <textarea type="text" name="texten" class="form-control" cols="10" rows="3" required>{{ $project->texten }}</textarea>
 
                                     </div>
                                     <div class="col-4">
                                         <label for="">
-                                            Text Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Text
                                         </label>
-                                        <textarea type="text" name="textar" class="form-control" cols="30" rows="20" required>{{ $project->textar }}</textarea>
+                                        <textarea type="text" name="textar" class="form-control" cols="30" rows="3" required>{{ $project->textar }}</textarea>
 
                                     </div>
 
-                                    <div class="col-4">
-                                        <label for="">
+                                    <div class="col-4 d-flex flex-column align-items-center">
+                                        <label for="exampleColorInput" class="mb-0">
                                             Color
                                         </label>
-                                        <input type="text" name="color" class="form-control"
-                                        value="{{ $project->color }}" >
-
+                                        <div class="input-container my-4">
+                                            <input type="color" name="color" class="form-control form-control-color" id="exampleColorInput" value="{{$project->color}}">
+                                        </div>
                                     </div>
 
 
@@ -146,7 +162,7 @@
                                         <img src="/project/{{ $project->img }}" width="100px" />
                                     </div>
 
-                                        <input type="file" name="img" class="form-control mt-3"  required>
+                                        <input type="file" name="img" class="form-control mt-3">
                                     </div>
                                     </div>
 

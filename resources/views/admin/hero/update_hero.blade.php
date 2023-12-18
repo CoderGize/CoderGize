@@ -22,28 +22,36 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titleen" class="form-control" required value="{{ $data->titleen }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titlear" class="form-control" required value="{{ $data->titlear }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Service English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Service
                         </label>
                         <input type="text" name="serviceen" class="form-control" required value="{{ $data->serviceen }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Service Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Service
                         </label>
                         <input type="text" name="servicear" class="form-control" required value="{{ $data->servicear }}">
                     </div>

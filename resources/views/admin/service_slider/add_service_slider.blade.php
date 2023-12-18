@@ -18,7 +18,7 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Icom
+                            Icon
                         </label>
                         <input type="file" name="icon" class="form-control" required>
 
@@ -30,14 +30,18 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titleen" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titlear" class="form-control" required>
                     </div>

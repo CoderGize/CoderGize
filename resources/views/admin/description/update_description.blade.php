@@ -32,33 +32,35 @@
                                 @csrf
 
                                 <div class="row text-center m-3">
-                                    <div class="col-4">
-                                        <label for="">
-                                            Project Name English
+
+                                    <div class="col-6">
+                                        <label for="exampleFormControlInput1" class="form-label">
+                                            Project
                                         </label>
-                                        <input type="text" name="project_nameen" class="form-control"
-                                            value="{{ $description->project_nameen }}">
-                                    </div>
-                                    <div class="col-4">
-                                        <label for="">
-                                            Project Name Arabic
-                                        </label>
-                                        <input type="text" name="project_namear" class="form-control"
-                                            value="{{ $description->project_namear }}">
+                                        <select class="form-select" name="project_id" aria-label="Pick a project">
+                                            <option value="-1" selected>Pick a project</option>
+                                            @foreach ($project as $project)
+                                            <option value="{{ $project->id }}">{{ $project->nameen }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
 
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <label for="">
-                                            Title English
+                                            <img src="/images/en.png" width="15px" alt="">
+
+                                            Title
                                         </label>
                                         <input type="text" name="titleen" class="form-control"
                                             value="{{ $description->titleen }}" >
                                     </div>
 
 
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <label for="">
-                                            Title Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Title
                                         </label>
                                         <input type="text" name="titlear" class="form-control"
                                             value="{{ $description->titlear }}" >
@@ -68,16 +70,20 @@
                                 <div class="row text-center m-3">
                                     <div class="col-6">
                                         <label for="">
-                                            Text English
+                                            <img src="/images/en.png" width="15px" alt="">
+
+                                            Text
                                         </label>
-                                        <textarea type="text" name="texten" class="form-control" cols="30" rows="20" required>{{ $description->texten }}</textarea>
+                                        <textarea type="text" name="texten" class="form-control" cols="30" rows="3" required>{{ $description->texten }}</textarea>
 
                                     </div>
                                     <div class="col-6">
                                         <label for="">
-                                            Text Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Text
                                         </label>
-                                        <textarea type="text" name="textar" class="form-control" cols="30" rows="20" required>{{ $description->textar }}</textarea>
+                                        <textarea type="text" name="textar" class="form-control" cols="30" rows="3" required>{{ $description->textar }}</textarea>
 
                                     </div>
                                 </div>

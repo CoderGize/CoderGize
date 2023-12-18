@@ -20,23 +20,29 @@
 
                 <div class="modal-body">
 
-                    <div class="mb-3">
+                    <div class="mb-3 d-flex flex-column align-items-center">
                         <label for="exampleFormControlInput1" class="form-label">
                             Color
                         </label>
-                        <input type="text" name="color" class="form-control" required value="{{ $data->color }}">
+                        <div class="input-container">
+                            <input type="color" name="color" class="form-control form-control-color" id="exampleColorInput" value="{{$data->color}}">
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titleen" class="form-control" required value="{{ $data->titleen }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titlear" class="form-control" required value="{{ $data->titlear }}">
                     </div>

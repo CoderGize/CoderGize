@@ -41,18 +41,26 @@
                                             </th>
                                             <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Title English
+                                                <img src="/images/en.png" width="15px" alt="">
+
+                                                Title
                                             </th>
                                             <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Title Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Title
                                         </th>
                                         <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Service English
+                                        <img src="/images/en.png" width="15px" alt="">
+
+                                        Service
                                     </th> <th
                                     class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Service Arabic
+                                    <img src="/images/ar.png" width="15px" alt="">
+
+                                    Service
                                 </th>
                                             {{-- <th
                                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">

@@ -49,48 +49,66 @@
 
                                         <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Category Name Arabic
+                                            <img src="/images/ar.png" width="15px" alt="">
+
+                                            Category Name
                                         </th>
 
-                                            <th
-                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Color
-                                            </th>
+                                        <th
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Color
+                                    </th>
                                             <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Name English
+                                            <img src="/images/en.png" width="15px" alt="">
+
+                                            Name
                                         </th>
                                         <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Name Arabic
+                                        <img src="/images/ar.png" width="15px" alt="">
+
+                                        Name
                                     </th>
 
                                     <th
                                     class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Text English
+                                    <img src="/images/en.png" width="15px" alt="">
+
+                                    Text
                                 </th>
 
                                 <th
                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                Text Arabic
+                                <img src="/images/ar.png" width="15px" alt="">
+
+                                Text
                             </th>
 
                             <th
                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                            Date English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Date
                         </th>
                         <th
                         class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        Date Arabic
+                        <img src="/images/ar.png" width="15px" alt="">
+
+                        Date
                     </th>
                     <th
                     class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                    Client English
+                    <img src="/images/en.png" width="15px" alt="">
+
+                    Client
                 </th>
 
                 <th
                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                Client Arabic
+                <img src="/images/ar.png" width="15px" alt="">
+
+                Client
             </th>
 
                                             <th class="text-secondary opacity-7"></th>

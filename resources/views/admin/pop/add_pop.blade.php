@@ -20,24 +20,28 @@
                         <label for="exampleFormControlInput1" class="form-label">
                             Color
                         </label>
-                        <input type="text" name="color" class="form-control" required>
+                        <input type="color" name="color" class="form-control form-control-color" id="exampleColorInput"  >
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title English
+                            <img src="/images/en.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titleen" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
-                            Title Arabic
+                            <img src="/images/ar.png" width="15px" alt="">
+
+                            Title
                         </label>
                         <input type="text" name="titlear" class="form-control" required>
                     </div>
 
-                    
+
                 </div>
 
                 <div class="modal-footer">
