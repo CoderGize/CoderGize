@@ -43,7 +43,8 @@
 
                                             <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Category Name English
+                                            <img src="/images/en.png" width="15px" alt="">
+                                            Category Name
                                         </th>
 
                                         <th
@@ -119,9 +120,7 @@
 
 
                                                 <td>
-                                                    <p class="text-xs font-weight-bold mb-0">
-                                                        {{ $data->color }}
-                                                    </p>
+                                                  <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{$data->color}}" disabled>
                                                 </td>
 
                                                 <td>

@@ -112,7 +112,7 @@
                                         <label for="">
                                             Text English
                                         </label>
-                                        <textarea type="text" name="texten" class="form-control" cols="30" rows="20" required>{{ $project->texten }}</textarea>
+                                        <textarea type="text" name="texten" class="form-control" cols="10" rows="3" required>{{ $project->texten }}</textarea>
 
                                     </div>
                                     <div class="col-4">

@@ -22,7 +22,6 @@ class CategoryController extends Controller
         $category->titleen = $request->titleen;
         $category->titlear = $request->titlear;
 
-
         $category->save();
 
         return redirect()->back()->with('message','Category Added');

@@ -20,31 +20,21 @@
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">
-                                Category ID
+                                Category
                             </label>
-                            <input type="number" name="category_id" class="form-control" required>
+                            <select class="form-select" name="category_id" aria-label="Pick a category">
+                                <option value="-1" selected>Pick a category</option>
+                                @foreach ($category as $category)
+                                    <option value="{{ $category->id }}">{{ $category->titleen }}</option>
+                                @endforeach
+                            </select>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">
-                                Category Name English
-                            </label>
-                            <input type="text" name="category_nameen" class="form-control" required>
-                        </div>
-
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">
-                            Category Name Arabic
-                        </label>
-                        <input type="text" name="category_namear" class="form-control" required>
-                    </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">
                             Color
                         </label>
-                        <input type="text" name="color" class="form-control" required>
+                        <input type="color" name="color" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
