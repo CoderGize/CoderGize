@@ -15,6 +15,7 @@ use App\Models\Project;
 use App\Models\Servicepage;
 use App\Models\Pop;
 use App\Models\Serviceslider;
+use App\Models\Social;
 use App\Models\User;
 use Illuminate\Http\Request;
 

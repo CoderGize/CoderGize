@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ServicePageController;
 use App\Http\Controllers\Admin\ServiceSliderController;
 use App\Http\Controllers\Admin\StrategyController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -139,11 +140,28 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::post('/update_service_page/{id}',[ServicePageController::class,'update_service_page']);
 
 
-
-
-
-
 });
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/api/get-hero',[ApiController::class,'getHero']);
+Route::get('/api/get-service',[ApiController::class,'getService']);
+Route::get('/api/get-process',[ApiController::class,'getProcess']);
+Route::get('/api/get-partner',[ApiController::class,'getPartner']);
+Route::get('/api/get-service_slider',[ApiController::class,'getServiceSlider']);
+Route::get('/api/get-customer',[ApiController::class,'getCustomer']);
+Route::get('/api/get-strategy',[ApiController::class,'getStrategy']);
+Route::get('/api/get-pop',[ApiController::class,'getPop']);
+Route::get('/api/get-info',[ApiController::class,'getInfo']);
+Route::get('/api/get-description',[ApiController::class,'getDescription']);
+Route::get('/api/get-project',[ApiController::class,'getProject']);
+Route::get('/api/get-category',[ApiController::class,'getCategory']);
+Route::get('/api/get-service_page',[ApiController::class,'getServicepage']);
+Route::get('/api/get-social', [ApiController::class, 'getSocial']);
 
 Route::get('/', function () {
     return view('welcome');
